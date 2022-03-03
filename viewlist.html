@@ -1,0 +1,45 @@
+<div class="table">
+    <div class="table-header">
+        <p>Employee <span>Details</span></p>
+        <div class="add-btn"onclick="openModal()"><button><i class="fa fa-plus"></i>Add New</button></div>
+    </div>
+    <div class="table-content">
+        <table border="1px">
+            <thead>
+                <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Phone</th>
+                <th>Actions</th>
+                </tr>  
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Modal layout -->
+<div class="modal" id="modal" >
+    <!-- <div class="modal__overlay" onclick="document.getElementById('modal').style.display='none'""> -->
+        <!-- jquery -->
+    <div class="modal__overlay" onclick="$('#modal').css('display','none')">
+    </div>
+    <div class="modal__body">
+            <h1>Add Employee</h1>
+            <hr>
+            <input type="hidden" name="id" id="id">
+            <label for="email"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" id="name" required>
+            
+            <label for="department"><b>Department</b></label>
+            <input type="text" placeholder="Enter Department" name="department" id="department" required>
+            
+            <label for="phone"><b>Phone</b></label>
+            <input type="tel" placeholder="Enter Phone Number" name="phone" id="phone" required>
+            <hr>
+            <button type="button" class="cancel-btn"  onclick="$('#modal').css('display','none')">Cancel</button>
+            <button type="button" class="save-btn" onclick= 'save()'>Save</button>
+                      
+    </div>
+</div>
